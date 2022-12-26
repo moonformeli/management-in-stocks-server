@@ -14,9 +14,10 @@ type HelloWorld struct {
 func main() {
 	e := echo.New()
 	fmt.Println("Hello world!", e)
+	fmt.Println("Hello world!")
 
 	e.GET("/", func(c echo.Context) error {
-		return c.JSON(http.StatusOK, HelloWorld{Message: "hello world"})
+		return c.JSON(http.StatusOK, HelloWorld{Message: "hello world!"})
 	})
 
 	e.Logger.Fatal(e.Start(":3030"))
