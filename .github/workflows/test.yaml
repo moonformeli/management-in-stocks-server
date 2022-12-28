@@ -22,7 +22,7 @@ jobs:
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
   show_env:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - run: echo '${{ env.mascot }}'
       - run: echo 'Hi ${{ env.mascot }}'  # Hi Octocat
