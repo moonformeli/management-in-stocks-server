@@ -21,3 +21,10 @@ jobs:
         run: echo '${{ toJSON(strategy) }}'
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
+  show_env:
+    runs-on: self-hosted
+    steps:
+      - run: echo '${{ env.mascot }}'
+      - run: echo 'Hi ${{ env.mascot }}'  # Hi Octocat
+        env:
+          mascot: Octocat
